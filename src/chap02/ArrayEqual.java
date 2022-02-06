@@ -6,8 +6,9 @@ public class ArrayEqual {
 	
 	// Q4
 	static void copy(int[] a, int[] b) {
-		for (int i = 0; i < b.length; i++)
-			b[i] = a[i];
+		int len = a.length <= b.length ? a.length : b.length;
+		for (int i = 0; i < len; i++)
+			a[i] = b[i];
 		
 		for (int i = 0; i < b.length; i++)
 			System.out.print(b[i] + " ");
@@ -15,8 +16,9 @@ public class ArrayEqual {
 	
 	// Q5
 	static void rcopy(int[] a, int[] b) {
-		for (int i = 0; i < a.length; i++)
-			b[i] = a[a.length - i - 1];
+		int len = a.length <= b.length ? a.length : b.length;
+		for (int i = 0; i < len; i++)
+			a[i] = b[b.length - i - 1];
 		
 		for (int i = 0; i < a.length; i++)
 			System.out.print(b[i] + " ");
